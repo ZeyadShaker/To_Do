@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">To Do</string>
+    <string name="select_date">select date</string>
+    <string name="select_time">select time</string>
+    <string name="to_do_list">To do List</string>
+    <string name="add_new_task">Add New Task</string>
+    <string name="title">title</string>
+    <string name="description">description</string>
+    <string name="language">language</string>
+    <string name="english">English</string>
+    <string name="mode">mode</string>
+    <string name="light">Light</string>
+    <string name="arabic">Arabic</string>
+    <string name="night">Night</string>
+
+    <string-array name="languages">
+        <item>English</item>
+        <item>Arabic</item>
+    </string-array>
+    <string-array name="modes">
+        <item>Light</item>
+        <item>Night</item>
+    </string-array>
+</resources>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">To Do</string>
+    <string name="select_date">حدد تاريخ</string>
+    <string name="select_time">حدد الوقت</string>
+    <string name="to_do_list">قائمة المهام</string>
+    <string name="add_new_task">إضافة مهمة جديدة</string>
+    <string name="title">العنوان</string>
+    <string name="description">الوصف</string>
+    <string name="language">اللغة</string>
+
+    <string name="mode">وضع الشاشة</string>
+
+
+</resources>
