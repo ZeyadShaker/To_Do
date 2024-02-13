@@ -44,7 +44,7 @@ class TaskDetailsActivity : AppCompatActivity() {
                 TasksDatabase.getInstance(this).getTasksDao().insertTask(modifyTask!!)
 
                 showData(modifyTask)
-                onSaveButtonAddedListener?.onTaskAdded()
+
 
 
                 finish()
