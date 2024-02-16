@@ -17,7 +17,6 @@ import java.util.Locale
 
 class SettingsFragment:Fragment() {
     lateinit var binding: FragmentSettingsBinding
-    lateinit var modeIcon: ImageView
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -39,18 +38,16 @@ class SettingsFragment:Fragment() {
             when (position) {
                 0 -> {
                     setLocale("en")
-                    val selectedItem=parent.getItemIdAtPosition(position).toString()
                     binding.autoCompleteTVLanguages.setText("English")
 
 
 
-                }// English
+                }
                 1 -> {
                     setLocale("ar")
-                    val selectedItem=parent.getItemIdAtPosition(position).toString()
                     binding.autoCompleteTVLanguages.setText("Arabic")
 
-                } // arabic
+                }
 
 
             }
@@ -59,9 +56,9 @@ class SettingsFragment:Fragment() {
             when (position) {
                 0 -> {setMode(AppCompatDelegate.MODE_NIGHT_NO)
                     binding.autoCompleteTVModes.setText(R.string.light)
-                } // Light Mode
+                }
                 1 ->{ setMode(AppCompatDelegate.MODE_NIGHT_YES)
-                binding.autoCompleteTVModes.setText(R.string.light)}// Night Mode
+                binding.autoCompleteTVModes.setText(R.string.light)}
             }
         }
         updateStartIcon()
@@ -100,11 +97,11 @@ class SettingsFragment:Fragment() {
         val config = Configuration()
         config.locale = locale
         resources.updateConfiguration(config, resources.displayMetrics)
-        requireActivity().recreate() // Refresh the activity to apply the new locale
+        requireActivity().recreate()
     }
     private fun setMode(mode: Int) {
         AppCompatDelegate.setDefaultNightMode(mode)
-        requireActivity().recreate() // Refresh the activity to apply the new theme
+        requireActivity().recreate()
     }
     private fun updateStartIcon() {
         val mode = resources?.configuration?.uiMode?.and(Configuration.UI_MODE_NIGHT_MASK)
@@ -112,7 +109,7 @@ class SettingsFragment:Fragment() {
         val startIconDrawable = when (mode) {
             Configuration.UI_MODE_NIGHT_NO -> R.drawable.ic_light_mode
             Configuration.UI_MODE_NIGHT_YES -> R.drawable.ic_dark
-            else -> R.drawable.ic_light_mode// Default to ic_light in unspecified mode
+            else -> R.drawable.ic_light_mode
         }
 
         binding.modeTil.startIconDrawable = ContextCompat.getDrawable(requireContext(), startIconDrawable)

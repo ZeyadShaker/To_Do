@@ -85,7 +85,6 @@ class TasksFragment:Fragment() {
      fun getTodos() {
         val tasks=TasksDatabase.getInstance(requireContext()).getTasksDao().getAllTasks()
         adapter.updateData(tasks)
-//
          adapter.notifyDataSetChanged()
 
     }
